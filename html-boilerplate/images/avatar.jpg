@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Aditya's Tech Journey</h1>
+    <!-- This is a comment: The main subtitle goes below -->
+    <h2>Building a Portfolio on a Budget</h2>
+    
+    <p>
+      Learning software engineering requires deep <strong>consistency</strong> and focus. 
+      Even when using affordable secondhand hardware, anyone can master the command line interface.
+    </p>
+
+    <p>
+      It is highly vital to practice every single day. As the saying goes, 
+      <em>"Actions speak louder than words."</em>
+    </p>
+    <!-- Assignment 1: Unordered Favourite food list -->
+    <h3>My favourite food items.</h3>
+    <ul>
+      <li>Paneer Butter Masala</li>
+      <li>Dal Makhni</li>
+      <li>Aloo Paratha</li>
+    </ul>
+    <!-- Assignment2: Ordered list of daily tasks -->
+    <h3>Today's Daily Tasks</h3>
+    <ol>
+      <li>Complete 10 minutes of coding practice</li>
+      <li>Review Accounts Notes</li>
+      <li>Solve two math problems</li>
+    </ol>
+    <!-- Assignment 3: Unordered Travel list -->
+     <h3>Places I want to visit someday.</h3>
+<ul>
+  <li>Silicon Valley, USA</li>
+  <li>Tokyo, Japan</li>
+  <li>Srinagar, Kashmir</li>
+</ul>
+<!-- Assignment 4: Ordered Top 5 ranking -->
+ <h3>My Top 5 Favourite Movies, Games and Webtoons</h3>
+ <ol>
+  <li>The Dark Knight</li>
+  <li>GTA V</li>
+  <li>The Silence of the Lambs</li>
+  <li>Solo Leveling</li>
+ </ol>
+ <h3>Navigation Tags</h3>
+ <!-- Absolute link to external website -->
+  <a href="https://www.theodinproject.com" target="_blank" rel="noreferrer">Visit The Odin Project</a>
+<br>
+  <!-- Relative link to another page in the same project -->
+  <a href="./pages/about.html">Read more About Me</a>
+      <h3>My Coding Space Avatar</h3>
+    <img src="./images/avatar.jpg" alt="Clean computer screen displaying colorful code lines" width="400">
+
+</body>
+</html>
