@@ -1,0 +1,8 @@
+.subsection.header {
+    color: orange;
+    font-weight: bold;
+}
+#preview {
+    color: blue;
+    background-color: yellow;
+}
