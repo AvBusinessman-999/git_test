@@ -21,3 +21,10 @@
     border: 5px solid black;
     margin: 40px;
 }
+.highlight {
+    background-color: #C493FF;
+    ;
+    color: white;
+    font-weight: bold;
+    padding: 2px 6px;
+}
