@@ -37,6 +37,11 @@
     margin: 10px;
     text-align: center;
     border: 2px solid darkgreen;
+    flex: 1;
+}
+.box-hog {
+    flex-grow: 3;
+    background-color: lightcoral;
 }
 /* Turn on the flex engine on the parent container */
 .flex-container {
