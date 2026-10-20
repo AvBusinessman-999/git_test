@@ -46,5 +46,11 @@
 /* Turn on the flex engine on the parent container */
 .flex-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #e5e7eb;
+    height: 200px;
+
 }
