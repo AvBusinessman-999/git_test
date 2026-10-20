@@ -46,4 +46,5 @@
 /* Turn on the flex engine on the parent container */
 .flex-container {
     display: flex;
+    flex-direction: column;
 }
