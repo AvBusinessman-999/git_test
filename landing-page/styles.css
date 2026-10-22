@@ -1,0 +1,53 @@
+/* 1. GLOBAL VARIABLES & RESET */
+:root {
+    --bg-dark: #1f2937;
+    --text-light: #f9fafb;
+    --text-muted: #e5e7eb;
+    --accent-blue: #38bdf8;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+}
+
+/* 2. HEADER CONTAINER LAYOUT */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 3. NAVIGATION LINKS FLEX ENGINE */
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
