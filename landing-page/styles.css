@@ -111,3 +111,28 @@ line-height: 1.2;
     border-radius: 8px;
     font-size: 14px;
 }
+
+/* IMAGE CONTAINER SIZING AND HOVER TRANSFORMS */
+.logo-img {
+    height: 90px;
+    width: 90px;
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+.logo-img:hover {
+    transform: scale(1.1);
+}
+.hero-img {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hero-img:hover {
+    transform: scale(1.05);
+}
