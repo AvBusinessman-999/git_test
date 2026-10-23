@@ -51,3 +51,63 @@ body {
 .nav-links a:hover {
     color: var(--accent-blue);
 }
+
+/*4. HERO SECTION LAYOUT */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 64px 40px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* FORCES EXACT 50/50 SPLIT */
+.hero-content,
+.hero-image-container {
+ flex: 1;
+}
+
+/* LEFT COLUMN TYPOGRAPHY AND BUTTON */
+.hero-content h1 {
+font-size: 48px;
+font-weight: 800;
+margin-bottom: 16px;
+line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.cta-btn {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark);
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.03);
+}
+
+/* RIGHT COLUMN PLACEHOLDER BOX */
+.image-placeholder {
+    background-color: #6b7280;
+    color: var(--text-light);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+}
