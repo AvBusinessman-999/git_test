@@ -91,8 +91,11 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 48px;
-    padding: 64px 40px;
-    background-color: var(--bg-dark);
+    padding: 80px 40px;
+    /* UPGRADED: Fuses a dark tint layer on the top of industrial blueprint texture */
+    background: linear-gradient(rgba(31,41,55,0.85), rgba(31,41,55,0.85)), url(industrial\ background.png);
+    background-size: cover;
+    background-position: center;
     color: var(--text-light);
 }
 
@@ -259,3 +262,165 @@ line-height: 1.2;
     color: #4b5563;
     line-height: 1.5;
 }
+
+/* 7. PREMIUM TESTIMONIAL SYSTEM */
+.testimonial-section {
+    padding: 90px 40px;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Wraps gracefully to a column layout if screen gets small */
+}
+
+.testimonial-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* THE BORDER FRAME ENGINE (THIS PARTS SPINS!) */
+.avatar-spin-wrapper {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    background: transparent;
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+
+/* HIGH-RESOLUTION STATIC HEADSHOT IMAGE (THIS PART REMAINS STEADY!) */
+.avatar-img {
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: block;
+}
+
+/* HOVER ANIMATION TRIGGER AXIS */
+.testimonial-card:hover .avatar-spin-wrapper {
+    transform: scale(1.08); /* Zooms up the container element */
+    background: conic-gradient(from 0deg, var(--accent-blue), #ffffff, var(--bg-dark), var(--accent-blue));
+    animation: rotateBorderOnly 2s linear infinite; /* Keeps spinning infinitely */
+}
+
+/* COUNTER-ROTATING THE IMAGE INTERNAL LAYER TO FORCE IT ABSOLUTELY STILL */
+.testimonial-card:hover .avatar-img {
+    animation: counterRotateImage 2s linear infinite;
+}
+
+/* CLOCKWISE RUN TRACKING */
+@keyframes rotateBorderOnly {
+    from { transform: scale(1.08) rotate(0deg); }
+    to { transform: scale(1.08) rotate(360deg); }
+}
+
+/* COUNTER-CLOCKWISE CORRECTOR ROUTINE */
+@keyframes counterRotateImage {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.quote {
+    font-size: 16px;
+    font-style: italic;
+    color: #374151;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.client-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bg-dark);
+}
+
+.client-title {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: -12px;
+}
+
+/* 8. TRUSTED BRANDS FOOTER SHOWCASE */
+.brands-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.brands-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9ca3af;
+    margin-bottom: 28px;
+}
+
+.brands-banner-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.brands-banner-wrapper:hover {
+    opacity: 1.0;
+}
+
+.brands-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 9. HIGH-END PRODUCTION FOOTER DESIGN */
+.main-footer {
+    padding: 40px 20px;
+    background-color: var(--bg-dark);
+    color: var(--text-muted);
+    text-align: center;
+    border-top: 1px solid #374151;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-main-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.footer-subtext {
+    font-size: 13px;
+    font-family: Cambria, Georgia, serif; /* Elegant contrast font pairing style */
+    color: #9ca3af;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
