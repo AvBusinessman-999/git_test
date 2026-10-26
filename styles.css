@@ -424,3 +424,51 @@ line-height: 1.2;
     letter-spacing: 0.5px;
 }
 
+/* Responsive Viewport Optimizations for Smart Phones */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Stacks the hero layout columns vertically */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  /* 2. Adjusts left content widths for mobile viewing */
+  .hero-content {
+    width: 100%;
+  }
+
+  /* 3. Forces the image column container to scale correctly */
+  .hero-image-container {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 4. Fixes the Product Catalog Section below so cards wrap elegantly */
+  .info-section { 
+    padding: 20px;
+  }
+
+  /* Target the flex/grid row inside your info-section */
+  .info-section div, 
+  .info-section ul { 
+    display: flex !important;
+    flex-wrap: wrap !important; /* Allows hidden items to wrap onto the next row */
+    justify-content: center !important;
+    gap: 15px !important;
+    overflow: visible !important; /* Disables the strict horizontal masking layout */
+  }
+
+  /* Prevents individual product graphics from shrinking */
+  .info-section img {
+    max-width: 100% !important;
+  }
+}
