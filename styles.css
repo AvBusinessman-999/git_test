@@ -427,7 +427,7 @@ line-height: 1.2;
 /* Responsive Viewport Optimizations for Smart Phones */
 @media screen and (max-width: 768px) {
   
-  /* 1. Stacks the hero layout columns vertically */
+  /* 1. Stack the hero section vertically */
   .hero {
     display: flex;
     flex-direction: column;
@@ -436,45 +436,53 @@ line-height: 1.2;
     gap: 20px;
   }
 
-  /* 2. Adjusts left content widths for mobile viewing */
-  .hero-content {
-    width: 100%;
-  }
-
-  /* 3. Forces the image column container to scale correctly */
+  .hero-content, 
   .hero-image-container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .hero-img {
     width: 100%;
-    max-width: 100%;
     height: auto;
   }
 
-  /* 4. Fixes the Product Catalog Section below so cards wrap elegantly */
-  .info-section { 
-    padding: 20px;
+  /* 2. Target the main content row inside the info section */
+  .info-section {
+    padding: 30px 15px !important;
   }
 
-  /* Target the flex/grid row inside your info-section */
-  .info-section div, 
-  .info-section ul { 
+  /* Force the container wrapping your 4 cards to stack vertically */
+  .info-section > div, 
+  .info-section > ul,
+  .info-section .product-row { 
     display: flex !important;
-    flex-wrap: wrap !important; /* Allows hidden items to wrap onto the next row */
-    justify-content: center !important;
-    gap: 15px !important;
-    overflow: visible !important; /* Disables the strict horizontal masking layout */
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 35px !important;
+    overflow: visible !important;
+    width: 100% !important;
   }
 
-  /* Prevents individual product graphics from shrinking */
-  .info-section img {
-    max-width: 100% !important;
+  /* 3. Explicitly size the parent containers/cards so they do not collapse */
+  .info-section div > div, 
+  .info-section li,
+  .info-section .product-card {
+    width: 100% !important;
+    max-width: 280px !important; /* Forces uniform size across all 4 products */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
   }
+
+  /* 4. Completely secure the asset image inside the card boundaries */
   .info-section img {
     width: 100% !important;
-    height: auto !important;
+    max-width: 100% !important;
+    height: 240px !important; /* Preserves your exact 240px square aesthetic layout */
     object-fit: cover !important;
-    border-radius: inherit !important;
+    border-radius: 8px !important; /* Adjust if your cards use a different curvature radius */
+    display: block !important;
   }
 }
