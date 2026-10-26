@@ -471,4 +471,10 @@ line-height: 1.2;
   .info-section img {
     max-width: 100% !important;
   }
+  .info-section img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: inherit !important;
+  }
 }
